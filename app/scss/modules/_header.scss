@@ -1,0 +1,38 @@
+.header {
+  background: url("../images/header-bg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    @include size(100%);
+    @include pos($t: 0, $l: 0);
+    content: "";
+    background: rgba(181, 202, 213, 0.6);
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    background: url('../images/ice.jpg') no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+    background-clip: text;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__line {
+    font-weight: 900;
+    letter-spacing: 0.06em;
+    font-size: 50px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0);
+    
+    background-size: cover;
+  }
+}
