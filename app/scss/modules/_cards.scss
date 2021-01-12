@@ -1,0 +1,140 @@
+.cards {
+  padding-bottom: 110px;
+  &__container {
+    position: relative;
+    &::before {
+      opacity: 1;
+      @include size(1px, 100%);
+      @include align(true, true, absolute);
+      content: "";
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    position: relative;
+    &::before,
+    &::after {
+      @include size(100%, 1px);
+      @include pos($l: 0);
+      content: "";
+      background: rgba(0, 0, 0, 0.3);
+    }
+    &::before {
+      @include pos($t: 33%);
+    }
+    &::after {
+      @include pos($t: 66%);
+    }
+  }
+  &__item {
+    @include size(160px, 160px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &__icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    &--check {
+      font-size: 20px;
+      @include size(50px);
+      border-radius: 50%;
+      border: 1px solid $text;
+      line-height: 50px;
+      margin: 0 auto 20px;
+      transition: all 0.3s ease;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 480px) {
+  .cards {
+    &__item {
+      @include size(220px, 200px);
+    }
+  }
+}
+
+@media (min-width: 560px) {
+  .cards {
+    margin: 0;
+    &__item {
+      @include size(270px, 200px);
+    }
+  }
+}
+
+@media (min-width: 810px) {
+  .cards {
+    &__container {
+      position: relative;
+      &::before {
+        opacity: 1;
+        @include size(calc(100% - 30px), 1px);
+        @include align(true, false, absolute);
+        left: 0;
+        content: "";
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+    &__wrapper {
+      position: relative;
+      &::before,
+      &::after {
+        @include size(1px, 100%);
+        @include pos($t: auto);
+        content: "";
+        background: rgba(0, 0, 0, 0.3);
+      }
+      &::before {
+        left: 33%;
+      }
+      &::after {
+        left: 66%;
+      }
+    }
+    &__item {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.2);
+        .cards {
+          &__icon {
+            color: rgb(18, 133, 168);
+            &--check {
+              border-color: rgb(18, 133, 168);
+            }
+          }
+          &__text {
+            color: rgb(18, 133, 168);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1005px) {
+  .cards {
+    &__item {
+      @include size(33%, 200px);
+      border: none;
+      &:nth-child(5),
+      &:nth-child(6) {
+        border: none;
+      }
+    }
+  }
+}

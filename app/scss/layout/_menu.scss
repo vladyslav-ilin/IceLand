@@ -1,0 +1,77 @@
+.menu {
+  @include size(40px, 30px);
+  @include pos($t: 20px, $r: 30px, $z: 100, $pos: fixed);
+  // transition: 0.5s ease-in-out;
+  cursor: pointer;
+  &__line {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    transition: 0.25s ease-in-out;
+    background: #1a85a5;
+    &:nth-child(even) {
+      left: 50%;
+      border-radius: 0 9px 9px 0;
+    }
+    &:nth-child(odd) {
+      left: 0;
+      border-radius: 9px 0 0 9px;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      top: 0;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      top: 15px;
+    }
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: 30px;
+    }
+  }
+  &__open {
+    @include pos($t: 20px, $r: 30px, $pos: fixed);
+    .menu__line {
+      &:nth-child(1),
+      &:nth-child(6) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(1) {
+        left: 4px;
+        top: 7px;
+      }
+      &:nth-child(2) {
+        left: calc(50% - 4px);
+        top: 7px;
+      }
+      &:nth-child(3) {
+        left: -50%;
+        opacity: 0;
+      }
+      &:nth-child(4) {
+        left: 100%;
+        opacity: 0;
+      }
+      &:nth-child(5) {
+        left: 4px;
+        top: 19px;
+      }
+      &:nth-child(6) {
+        left: calc(50% - 4px);
+        top: 19px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .menu{
+    display: none;
+  }
+}

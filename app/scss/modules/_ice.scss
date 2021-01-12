@@ -1,0 +1,47 @@
+.ice {
+  padding: 160px 0;
+  &__info {
+    margin-bottom: 40px;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    @include size(200px, 400px);
+    overflow: hidden;
+    position: relative;
+    margin: 0 5px 20px;
+  }
+  &__img {
+    @include pos($b: 0, $l: 0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .ice {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__info {
+      width: 33%;
+    }
+    &__content {
+      width: 62%;
+      justify-content: center;
+    }
+    &__item {
+      @include size(33%, 590px);
+      margin: 0;
+      &::before {
+        @include size(100%);
+        @include pos($t: 0, $l: 0, $z: 10);
+        content: "";
+        background: rgba(181, 202, 213, 0.6);
+        pointer-events: none;
+      }
+    }
+  }
+}
