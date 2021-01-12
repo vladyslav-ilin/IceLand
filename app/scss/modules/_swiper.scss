@@ -1,25 +1,99 @@
-.swiper{
+.slider {
+  &__arrow {
+    position: relative;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__items {
+    margin-bottom: 20px;
+    height: 450px;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 20px;
+    height: 100%;
+  }
+
+  &__text {
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    position: absolute;
+    top: 0px;
+    right: -25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    background: $button;
+    padding: 10px 20px;
+  }
+
+  &__img {
+    padding-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $mobile) {
+    &__item {
+      height: 510px;
+      width: 90%;
+    }
+    &__img {
+      width: 100%;
+    }
+
+    &__price {
+      padding: 20px 40px;
+    }
+
+    .slider__items {
+      height: 500px;
+      width: 90%;
+    }
+  }
+
+  // .swiper-container {
+  //   overflow: visible;
+  // }
+}
+.swiper {
   padding-bottom: 115px;
-  &__title{
+  &__title {
     font-size: 28px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 30px;
   }
-  &__item{
+  &__item {
     @include size(33.3%, 230px);
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    &:hover{
-      .swiper__text{
+    &:hover {
+      .swiper__text {
         @include size(100%, 100%);
         bottom: 0;
       }
     }
   }
-  &__text{
+  &__text {
     @include size(100%, 0);
     @include pos($b: -100%, $l: 0);
     padding: 30px 50px 30px 25px;
@@ -29,20 +103,20 @@
     font-weight: 500;
     letter-spacing: 0.06em;
     color: $white;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
   }
-  &__info{
+  &__info {
     @include size(100%, 60px);
     padding: 10px 15px 5px 25px;
     @include pos($b: 0, $l: 0);
     background: rgba(8, 36, 51, 0.5);
   }
-  &__name{
+  &__name {
     color: $white;
     font-weight: 600;
     letter-spacing: 0.06em;
   }
-  &__date{
+  &__date {
     color: $white;
     font-size: 12px;
     font-weight: 500;
