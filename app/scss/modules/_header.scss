@@ -2,7 +2,8 @@
   background: url("../images/header-bg.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-
+  padding-top: 20px;
+  min-height: 100vh;
   &::before {
     @include size(100%);
     @include pos($t: 0, $l: 0);
@@ -11,18 +12,27 @@
     pointer-events: none;
   }
 
+  &__wrapper {
+    padding-top: 20vh;
+  }
+
   &__container {
     position: relative;
     z-index: 2;
   }
 
+  &__info {
+    margin-bottom: 15vh;
+  }
+
   &__title {
-    background: url('../images/ice.jpg') no-repeat center;
+    background: url("../images/ice.jpg") no-repeat center;
     background-size: cover;
     overflow: hidden;
     background-clip: text;
     width: 100%;
     text-align: center;
+    margin-bottom: 10vh;
   }
 
   &__line {
@@ -32,7 +42,56 @@
     line-height: 1.1;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0);
-    
+
     background-size: cover;
+  }
+}
+
+@media (min-width: 414px) {
+  .header {
+    &__title {
+      text-align: left;
+    }
+    &__line {
+      font-size: 68px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    &__info {
+      width: 75%;
+    }
+    &__line {
+      font-size: 105px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    &__wrapper {
+      width: 75%;
+      margin: 0 auto;
+    }
+    &__line {
+      font-size: 100px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    &__line {
+      font-size: 144px;
+    }
+    &__title{
+      margin-bottom: 5vh;
+    }
+    &__info {
+      width: 45%;
+      margin-bottom: 10vh;
+    }
   }
 }
