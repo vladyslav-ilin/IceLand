@@ -1,0 +1,74 @@
+.mountain {
+  text-align: center;
+  margin: 20px 0 30px;
+
+  &__order {
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    letter-spacing: 2px;
+  }
+
+  &__about {
+    line-height: 27px;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $mobile) {
+    margin-top: 60px;
+    &__block {
+      display: flex;
+      margin-right: 80px;
+    }
+
+    &__img {
+      margin-bottom: 50px;
+    }
+
+    &__img--1 {
+      @include size(324px, 404px);
+    }
+
+    &__order {
+      text-align: left;
+      padding-top: 70px;
+    }
+
+    &__block--2 {
+      padding-top: 50px;
+    }
+
+    &__board {
+      display: flex;
+    }
+
+    &__flex {
+      display: flex;
+    }
+
+    &__info {
+      position: relative;
+      text-align: left;
+    }
+
+    &__info-2 {
+      width: 100%;
+      text-align: left;
+      margin-left: 80px;
+    }
+
+    &__img--mod {
+      position: absolute;
+      bottom: 0px;
+      right: -15px;
+    }
+
+    &__about {
+      width: 80%;
+    }
+  }
+}
