@@ -1,74 +1,93 @@
-.navigation{
+.navigation {
   position: relative;
-  &__wrapper{
-    @include pos(fixed, 0 ,false, 0, -100%);
+  &__wrapper {
+    @include pos(fixed, 0, false, 0, -100%);
     padding: 10px;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     width: 100%;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
   }
-  &__open{
+  &__open {
     left: 0;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, 0.8);
   }
 }
 
-.navigation-menu{
+.navigation-menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  &__list{  
+  &__list {
     font-size: 20px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  
 }
 
-.navigation-social{
+.navigation-social {
   width: 100%;
-  @include pos($pos: absolute, $b: 20px);  
+  @include pos($pos: absolute, $b: 20px);
   display: flex;
   justify-content: center;
-  &__list{
+  &__list {
     margin: 0 20px;
     font-size: 26px;
   }
 }
 
-@media (min-width: 768px){
-  .navigation{
-    &__wrapper{
+@media (min-width: 768px) {
+  .navigation {
+    &__wrapper {
       left: 0;
       position: absolute;
     }
   }
 
-  .navigation-menu{
+  .navigation-menu {
     @include pos($t: 0, $l: 0, $pos: absolute);
     flex-direction: row;
     writing-mode: vertical-lr;
     justify-content: space-between;
     transform: rotate(180deg);
     padding: 60px 0 40px;
-    &__link{
+    &__link {
       color: $text;
     }
   }
 
-  .navigation-social{
+  .navigation-social {
     @include pos($t: 60px, $r: 0, $b: auto);
     flex-direction: column;
     align-items: flex-end;
-    &__list{
+    &__list {
       margin-bottom: 25px;
     }
-    &__link{
+    &__link {
       color: $text;
     }
   }
 }
 
+.navigation-page {
+  display: flex;
+
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+
+  &__list {
+    margin-right: 90px;
+  }
+
+  &__link {
+    color: #082433;
+    text-decoration: none;
+  }
+}
+
+.active {
+  border-bottom: 1px solid #082433;
+}
