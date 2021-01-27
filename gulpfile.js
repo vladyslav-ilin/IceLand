@@ -1,12 +1,14 @@
 const SOURCES = {
 	css: [
 		'./node_modules/bootstrap/dist/css/bootstrap.min.css',
-		'./node_modules/swiper/swiper-bundle.min.css'
+		'./node_modules/swiper/swiper-bundle.min.css',
+		'node_modules/slick-carousel/slick/slick.css'
 	],
 	js: [
 		'./node_modules/jquery/dist/jquery.min.js',
 		'./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
-		'./node_modules/swiper/swiper-bundle.min.js'
+		'./node_modules/swiper/swiper-bundle.min.js',
+		'node_modules/slick-carousel/slick/slick.min.js'
 	]
 };
 

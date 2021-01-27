@@ -1,7 +1,43 @@
-.button{
+.button-item{
+  position: relative;
+}
+.button {
   text-transform: uppercase;
   font-weight: 600;
   background: $button;
   padding: 20px 40px;
   display: inline-block;
+  color: $text;
+  transition: all .3s ease;
+  position: relative;
+  &--active{
+    z-index: 5;
+    position: relative;
+  }
+  &::before,
+  &::after{
+    @include size(0, 100%);
+    @include pos($t: 0);
+    content: '';
+    position: absolute;
+    background: $text;
+    opacity: 0;
+    transition: all .4s ease-in-out;
+  }
+  &::before{
+    left: 0;
+  }
+  &::after{
+    right: 0;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    &::before,
+    &::after{
+      width: 50%;
+      opacity: 1;
+    }
+  }
 }
+

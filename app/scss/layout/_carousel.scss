@@ -1,0 +1,21 @@
+@media (max-width: 768px) {
+  .carousel {
+    position: relative;
+    padding: 0 15px;
+    height: 400px;
+    overflow: hidden;
+    &__item {
+      padding: 0 0 100% 0;
+    }
+    &__img {
+      @include pos($t: 0, $l: 0);
+      @include size(100%, 400px);
+    }
+  }
+  
+}
+@media (min-width: 768px) {
+  .carousel {
+    width: 50%;
+  }
+}

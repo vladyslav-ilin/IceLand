@@ -22,56 +22,57 @@
 
 <body>
 	<header class="header">
-		<div class="container-fluid header__container">
-			<nav class="navigation">
-				<div class="menu">
-					<span class="menu__line"></span>
-					<span class="menu__line"></span>
-					<span class="menu__line"></span>
-					<span class="menu__line"></span>
-					<span class="menu__line"></span>
-					<span class="menu__line"></span>
-				</div>
-				<div class="navigation__wrapper">
-					<ul class="navigation-menu">
-						<li class="navigation-menu__list active">
-							<a class="navigation-menu__link" href="index.html">home</a>
-						</li>
-						<li class="navigation-menu__list">
-							<a class="navigation-menu__link" href="tours.html">tours</a>
-						</li>
-						<li class="navigation-menu__list">
-							<a class="navigation-menu__link" href="booking.html">booking</a>
-						</li>
-						<li class="navigation-menu__list">
-							<a class="navigation-menu__link" href="contacts.html">contacts</a>
-						</li>
-					</ul>
+		<nav class="navigation">
+			<div class="menu">
+				<span class="menu__line"></span>
+				<span class="menu__line"></span>
+				<span class="menu__line"></span>
+				<span class="menu__line"></span>
+				<span class="menu__line"></span>
+				<span class="menu__line"></span>
+			</div>
+			<div class="navigation__wrapper">
+				<ul class="navigation-menu">
+					<li class="navigation-menu__list">
+						<a class="navigation-menu__link navigation-menu__link--active" href="index.html">home</a>
+					</li>
+					<li class="navigation-menu__list">
+						<a class="navigation-menu__link" href="tours.html">tours</a>
+					</li>
+					<li class="navigation-menu__list">
+						<a class="navigation-menu__link" href="booking.html">booking</a>
+					</li>
+					<li class="navigation-menu__list">
+						<a class="navigation-menu__link" href="contacts.html">contacts</a>
+					</li>
+				</ul>
 
-					<ul class="navigation-social">
-						<li class="navigation-social__list">
-							<a class="navigation-social__link" href="#">
-								<i class="navigation__icon icon-vector"></i>
-							</a>
-						</li>
-						<li class="navigation-social__list">
-							<a class="navigation-social__link" href="#">
-								<i class="navigation__icon icon-inst"></i>
-							</a>
-						</li>
-						<li class="navigation-social__list">
-							<a class="navigation-social__link" href="#">
-								<i class="navigation__icon icon-twitter"></i>
-							</a>
-						</li>
-						<li class="navigation-social__list">
-							<a class="navigation-social__link" href="#">
-								<i class="navigation__icon icon-facebook"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
+				<ul class="navigation-social">
+					<li class="navigation-social__list">
+						<a class="navigation-social__link" href="#">
+							<i class="navigation__icon icon-vector"></i>
+						</a>
+					</li>
+					<li class="navigation-social__list">
+						<a class="navigation-social__link" href="#">
+							<i class="navigation__icon icon-inst"></i>
+						</a>
+					</li>
+					<li class="navigation-social__list">
+						<a class="navigation-social__link" href="#">
+							<i class="navigation__icon icon-twitter"></i>
+						</a>
+					</li>
+					<li class="navigation-social__list">
+						<a class="navigation-social__link" href="#">
+							<i class="navigation__icon icon-facebook"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid header__container">
+			
 
 			<div class="header__wrapper">
 				<h1 class="header__title">
@@ -84,7 +85,7 @@
 						from the sea. The bay offers you breathtaking scenery
 					</p>
 				</div>
-				<a class="button" href="#">book now</a>
+				<a class="button" href="#"><span class="button--active">book now</span></a>
 			</div>
 		</div>
 	</header>
@@ -109,8 +110,7 @@
 						<p class="tours__text--2"><span class="tours__text--2 tours__text--2--mod">1500 $</span> 1000 $
 						</p>
 					</div>
-
-					<a class="button" href="#">lern more</a>
+						<a class="button" href="#"><span class="button--active">lern more</span></a>
 				</div>
 				<div class="tours__photo">
 					<img src="images/tours/6.jpg" alt="tours" class="tours__img">
@@ -142,7 +142,7 @@
 					Operator” by the Icelandic
 					Tourist Board. WELCOME ABOARD!
 				</p>
-				<a class="button" href="#">view tour</a>
+				<a class="button" href="#"><span class="button--active">view tour</span></a>
 			</div>
 			<div class="ice__content">
 				<div class="ice__item">
@@ -319,12 +319,21 @@
 	</section>
 
 	<section class="swiper">
-		<div class="container-fluid">
+		<div class="container-fluid swiper__fluid">
 			<h1 class="swiper__title">Traveller’s <br> Experiences</h1>
 			<div class="swiper__container swiper-container">
 				<div class="swiper__wrapper swiper-wrapper">
 
 					<div class="swiper__item swiper-slide">
+						<div class="swiper__content">
+							<div class="swiper__photo">
+								<img class="swiper__img" src="images/slider-2/1.jpg" alt="Swiper">
+							</div>
+							<div class="swiper__info">
+								<div class="swiper__name">Ann</div>
+								<div class="swiper__date">Mar 2020</div>
+							</div>
+						</div>
 						<p class="swiper__text">
 							Very good tour package. We went twice! On the first night, we were taken to several spots to
 							look out for
@@ -332,14 +341,18 @@
 							it. So, we were
 							offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
 						</p>
-						<img class="swiper__img" src="images/slider-2/1.jpg" alt="Swiper">
-						<div class="swiper__info">
-							<div class="swiper__name">Ann</div>
-							<div class="swiper__date">Mar 2020</div>
-						</div>
 					</div>
 
 					<div class="swiper__item swiper-slide">
+						<div class="swiper__content">
+							<div class="swiper__photo">
+								<img class="swiper__img" src="images/slider-2/2.jpg" alt="Swiper">
+							</div>
+							<div class="swiper__info">
+								<div class="swiper__name">Mary</div>
+								<div class="swiper__date">Apr 2019</div>
+							</div>
+						</div>
 						<p class="swiper__text">
 							Very good tour package. We went twice! On the first night, we were taken to several spots to
 							look out for
@@ -347,14 +360,18 @@
 							it. So, we were
 							offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
 						</p>
-						<img class="swiper__img" src="images/slider-2/2.jpg" alt="Swiper">
-						<div class="swiper__info">
-							<div class="swiper__name">Ann</div>
-							<div class="swiper__date">Mar 2020</div>
-						</div>
 					</div>
 
 					<div class="swiper__item swiper-slide">
+						<div class="swiper__content">
+							<div class="swiper__photo">
+								<img class="swiper__img" src="images/slider-2/3.jpg" alt="Swiper">
+							</div>
+							<div class="swiper__info">
+								<div class="swiper__name">Don</div>
+								<div class="swiper__date">Sep 2019</div>
+							</div>
+						</div>
 						<p class="swiper__text">
 							Very good tour package. We went twice! On the first night, we were taken to several spots to
 							look out for
@@ -362,14 +379,18 @@
 							it. So, we were
 							offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
 						</p>
-						<img class="swiper__img" src="images/slider-2/3.jpg" alt="Swiper">
-						<div class="swiper__info">
-							<div class="swiper__name">Ann</div>
-							<div class="swiper__date">Mar 2020</div>
-						</div>
 					</div>
 
 					<div class="swiper__item swiper-slide">
+						<div class="swiper__content">
+							<div class="swiper__photo">
+								<img class="swiper__img" src="images/slider-2/1.jpg" alt="Swiper">
+							</div>
+							<div class="swiper__info">
+								<div class="swiper__name">Ann</div>
+								<div class="swiper__date">Mar 2020</div>
+							</div>
+						</div>
 						<p class="swiper__text">
 							Very good tour package. We went twice! On the first night, we were taken to several spots to
 							look out for
@@ -377,14 +398,18 @@
 							it. So, we were
 							offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
 						</p>
-						<img class="swiper__img" src="images/slider-2/1.jpg" alt="Swiper">
-						<div class="swiper__info">
-							<div class="swiper__name">Ann</div>
-							<div class="swiper__date">Mar 2020</div>
-						</div>
 					</div>
 
 					<div class="swiper__item swiper-slide">
+						<div class="swiper__content">
+							<div class="swiper__photo">
+								<img class="swiper__img" src="images/slider-2/2.jpg" alt="Swiper">
+							</div>
+							<div class="swiper__info">
+								<div class="swiper__name">Mary</div>
+								<div class="swiper__date">Apr 2019</div>
+							</div>
+						</div>
 						<p class="swiper__text">
 							Very good tour package. We went twice! On the first night, we were taken to several spots to
 							look out for
@@ -392,14 +417,18 @@
 							it. So, we were
 							offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
 						</p>
-						<img class="swiper__img" src="images/slider-2/2.jpg" alt="Swiper">
-						<div class="swiper__info">
-							<div class="swiper__name">Ann</div>
-							<div class="swiper__date">Mar 2020</div>
-						</div>
 					</div>
 
 					<div class="swiper__item swiper-slide">
+						<div class="swiper__content">
+							<div class="swiper__photo">
+								<img class="swiper__img" src="images/slider-2/3.jpg" alt="Swiper">
+							</div>
+							<div class="swiper__info">
+								<div class="swiper__name">Don</div>
+								<div class="swiper__date">Sep 2019</div>
+							</div>
+						</div>
 						<p class="swiper__text">
 							Very good tour package. We went twice! On the first night, we were taken to several spots to
 							look out for
@@ -407,15 +436,16 @@
 							it. So, we were
 							offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
 						</p>
-						<img class="swiper__img" src="images/slider-2/3.jpg" alt="Swiper">
-						<div class="swiper__info">
-							<div class="swiper__name">Ann</div>
-							<div class="swiper__date">Mar 2020</div>
-						</div>
 					</div>
 
+					
 				</div>
 			</div>
+			<div class="swiper__arrows">
+				<div class="swiper__next"><i class="icon-arrow swiper__arrow"></i></div>
+				<div class="swiper__prev"><i class="icon-arrow swiper__arrow"></i></div>
+			</div>
+			<div class="swiper-pagination swiper__dots"></div>	
 		</div>
 	</section>
 

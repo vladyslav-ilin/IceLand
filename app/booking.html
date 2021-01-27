@@ -23,22 +23,133 @@
 <body>
 
     <header class="booking">
-        <div class="container-fluid">
-            <ul class="navigation-page">
-                <li class="navigation-page__list ">
-                    <a class="navigation-page__link" href="index.html">home</a>
-                </li>
-                <li class="navigation-page__list">
-                    <a class="navigation-page__link" href="tours.html">tours</a>
-                </li>
-                <li class="navigation-page__list active">
-                    <a class="navigation-page__link" href="booking.html">booking</a>
-                </li>
-                <li class="navigation-page__list">
-                    <a class="navigation-page__link" href="contacts.html">contacts</a>
-                </li>
-            </ul>
+        <div class="container-fluid booking__container">
+            
+            <div class="booking__wrapper">
+                <div class="booking__items">
+                    <h1 class="booking__title">
+                        Select Date and Travellers
+                    </h1>
+
+                    <ul class="booking__nav">
+                        <li class="booking__item">
+                            <a href="#" class="booking__link">6 nov <i class="icon-peoples booking__link--icon"></i></a>
+                        </li>
+                        <li class="booking__item">
+                            <a href="#" class="booking__link">2 adults <i class="icon-date booking__link--icon"></i></a>
+                        </li>
+                        <li class="booking__item">
+                            <a href="#" class="booking__link booking__link--text booking__link--active">book now</a>
+                        </li>
+                    </ul>
+
+                    <p class="booking__text">
+                        “Ring Road Highlights” is one of our bestselling car rental packages, allowing you to visit all
+                        of Iceland’s main attractions in eight days. Discover the legendary natural wonders and magical
+                        landscapes that make Iceland so special.
+                    </p>
+
+                    <div class="booking__info row">
+                        <div class="booking__time col-12 col-md-5">
+                            <h3 class="booking__subtitle">Duration:</h3>
+                            <p class="booking__travel">
+                                <i class="icon-time booking__travel--icon"></i> 4days/3nights
+                            </p>
+                        </div>
+                        <div class="booking__time col-12 col-md-5">
+                            <h3 class="booking__subtitle">Type of traveller:</h3>
+                            <p class="booking__travel">
+                                <i class="icon-fire booking__travel--icon"></i> Adventurer
+                            </p>
+                            <p class="booking__travel">
+                                <i class="icon-star booking__travel--icon"></i> Family Friendly
+                            </p>
+                            <p class="booking__travel">
+                                <i class="icon-hand booking__travel--icon"></i> Nature Lover
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking__content">
+                    <div class="booking__slide">
+                        <img class="booking__photo" src="images/booking/slider/1.jpg" alt="Mountain">
+                    </div>
+
+                    <div class="booking__slide">
+                        <img class="booking__photo" src="images/booking/slider/2.jpg" alt="Mountain">
+                    </div>
+
+                    <div class="booking__slide">
+                        <img class="booking__photo" src="images/booking/slider/3.jpg" alt="Mountain">
+                    </div>
+
+                    <div class="booking__slide">
+                        <img class="booking__photo" src="images/booking/slider/1.jpg" alt="Mountain">
+                    </div>
+
+                    <div class="booking__slide">
+                        <img class="booking__photo" src="images/booking/slider/2.jpg" alt="Mountain">
+                    </div>
+
+                    <div class="booking__slide">
+                        <img class="booking__photo" src="images/booking/slider/3.jpg" alt="Mountain">
+                    </div>
+                </div>
+            </div>
         </div>
+        <div class="carousel">
+            <div class="carousel__items">
+                <div class="carousel__item">
+                    <img class="carousel__img" src="images/booking/slider/1-big.jpg" alt="Mountain">
+                </div>
+
+                <div class="carousel__item">
+                    <img class="carousel__img" src="images/booking/slider/2-big.jpg" alt="Mountain">
+                </div>
+
+                <div class="carousel__item">
+                    <img class="carousel__img" src="images/booking/slider/3-big.jpg" alt="Mountain">
+                </div>
+
+                <div class="carousel__item">
+                    <img class="carousel__img" src="images/booking/slider/1-big.jpg" alt="Mountain">
+                </div>
+
+                <div class="carousel__item">
+                    <img class="carousel__img" src="images/booking/slider/2-big.jpg" alt="Mountain">
+                </div>
+
+                <div class="carousel__item">
+                    <img class="carousel__img" src="images/booking/slider/3-big.jpg" alt="Mountain">
+                </div>
+            </div>
+        </div>
+        <nav class="navigation booking__navigation">
+            <div class="menu">
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+            </div>
+            <div class="navigation__wrapper">
+                <ul class="navigation-menu booking__navigation-menu">
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link" href="index.html">home</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link" href="tours.html">tours</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link navigation-menu__link--active booking__menu-link" href="booking.html">booking</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link" href="contacts.html">contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <section class="road">
@@ -178,6 +289,257 @@
         </div>
 
 
+    </section>
+
+    <section class="swiper">
+        <div class="container-fluid swiper__fluid">
+            <h1 class="swiper__title">Traveller’s <br> Experiences</h1>
+            <div class="swiper__container swiper-container">
+                <div class="swiper__wrapper swiper-wrapper">
+
+                    <div class="swiper__item swiper-slide">
+                        <div class="swiper__content">
+                            <div class="swiper__photo">
+                                <img class="swiper__img" src="images/slider-2/1.jpg" alt="Swiper">
+                            </div>
+                            <div class="swiper__info swiper__info--booking">
+                                <div class="swiper__box">
+                                    <div class="swiper__name">Ann</div>
+                                    <div class="swiper__date">Mar 2020</div>
+                                </div>
+                                <ul class="swiper__stars">
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p class="swiper__text">
+                            Very good tour package. We went twice! On the first night, we were taken to several spots to
+                            look out for
+                            the northern lights. It did appear but was not very "showy" as the guide (Mr Erick) termed
+                            it. So, we were
+                            offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
+                        </p>
+                    </div>
+
+                    <div class="swiper__item swiper-slide">
+                        <div class="swiper__content">
+                            <div class="swiper__photo">
+                                <img class="swiper__img" src="images/slider-2/2.jpg" alt="Swiper">
+                            </div>
+                            <div class="swiper__info swiper__info--booking">
+                                <div class="swiper__box">
+                                    <div class="swiper__name">Mary</div>
+                                    <div class="swiper__date">Apr 2019</div>
+                                </div>
+                                <ul class="swiper__stars">
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p class="swiper__text">
+                            Very good tour package. We went twice! On the first night, we were taken to several spots to
+                            look out for
+                            the northern lights. It did appear but was not very "showy" as the guide (Mr Erick) termed
+                            it. So, we were
+                            offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
+                        </p>
+                    </div>
+
+                    <div class="swiper__item swiper-slide">
+                        <div class="swiper__content">
+                            <div class="swiper__photo">
+                                <img class="swiper__img" src="images/slider-2/3.jpg" alt="Swiper">
+                            </div>
+                            <div class="swiper__info swiper__info--booking">
+                                <div class="swiper__box">
+                                    <div class="swiper__name">Don</div>
+                                    <div class="swiper__date">Sep 2019</div>
+                                </div>
+                                <ul class="swiper__stars">
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p class="swiper__text">
+                            Very good tour package. We went twice! On the first night, we were taken to several spots to
+                            look out for
+                            the northern lights. It did appear but was not very "showy" as the guide (Mr Erick) termed
+                            it. So, we were
+                            offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
+                        </p>
+                    </div>
+
+                    <div class="swiper__item swiper-slide">
+                        <div class="swiper__content">
+                            <div class="swiper__photo">
+                                <img class="swiper__img" src="images/slider-2/1.jpg" alt="Swiper">
+                            </div>
+                            <div class="swiper__info swiper__info--booking">
+                                <div class="swiper__box">
+                                    <div class="swiper__name">Ann</div>
+                                    <div class="swiper__date">Mar 2020</div>
+                                </div>
+                                <ul class="swiper__stars">
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p class="swiper__text">
+                            Very good tour package. We went twice! On the first night, we were taken to several spots to
+                            look out for
+                            the northern lights. It did appear but was not very "showy" as the guide (Mr Erick) termed
+                            it. So, we were
+                            offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
+                        </p>
+                    </div>
+
+                    <div class="swiper__item swiper-slide">
+                        <div class="swiper__content">
+                            <div class="swiper__photo">
+                                <img class="swiper__img" src="images/slider-2/2.jpg" alt="Swiper">
+                            </div>
+                            <div class="swiper__info swiper__info--booking">
+                                <div class="swiper__box">
+                                    <div class="swiper__name">Mary</div>
+                                    <div class="swiper__date">Apr 2019</div>
+                                </div>
+                                <ul class="swiper__stars">
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p class="swiper__text">
+                            Very good tour package. We went twice! On the first night, we were taken to several spots to
+                            look out for
+                            the northern lights. It did appear but was not very "showy" as the guide (Mr Erick) termed
+                            it. So, we were
+                            offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
+                        </p>
+                    </div>
+
+                    <div class="swiper__item swiper-slide">
+                        <div class="swiper__content">
+                            <div class="swiper__photo">
+                                <img class="swiper__img" src="images/slider-2/3.jpg" alt="Swiper">
+                            </div>
+                            <div class="swiper__info swiper__info--booking">
+                                <div class="swiper__box">
+                                    <div class="swiper__name">Don</div>
+                                    <div class="swiper__date">Sep 2019</div>
+                                </div>
+                                <ul class="swiper__stars">
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                    <li class="swiper__star">
+                                        &#9733;
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <p class="swiper__text">
+                            Very good tour package. We went twice! On the first night, we were taken to several spots to
+                            look out for
+                            the northern lights. It did appear but was not very "showy" as the guide (Mr Erick) termed
+                            it. So, we were
+                            offered to go again the following night FOC. On the 2nd nite, it was very clear sky but alas
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="swiper__arrows">
+                <div class="swiper__next"><i class="icon-arrow swiper__arrow"></i></div>
+                <div class="swiper__prev"><i class="icon-arrow swiper__arrow"></i></div>
+            </div>
+            <div class="swiper-pagination swiper__dots"></div>
+        </div>
     </section>
 
     <footer class="footer">
