@@ -7,7 +7,7 @@
       @include size(1px, 100%);
       @include align(true, true, absolute);
       content: "";
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.2);
     }
   }
   &__wrapper {
@@ -20,7 +20,7 @@
       @include size(100%, 1px);
       @include pos($l: 0);
       content: "";
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.2);
     }
     &::before {
       @include pos($t: 33%);
@@ -86,7 +86,7 @@
         @include align(true, false, absolute);
         left: 0;
         content: "";
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.1);
       }
     }
     &__wrapper {
@@ -96,7 +96,7 @@
         @include size(1px, 100%);
         @include pos($t: auto);
         content: "";
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.1);
       }
       &::before {
         left: 33%;

@@ -23,23 +23,259 @@
 <body>
 
     <header class="tours-page">
-        <div class="container-fluid">
-            <ul class="navigation-page">
-                <li class="navigation-page__list ">
-                    <a class="navigation-page__link" href="index.html">home</a>
-                </li>
-                <li class="navigation-page__list active">
-                    <a class="navigation-page__link" href="tours.html">tours</a>
-                </li>
-                <li class="navigation-page__list ">
-                    <a class="navigation-page__link" href="booking.html">booking</a>
-                </li>
-                <li class="navigation-page__list">
-                    <a class="navigation-page__link" href="contacts.html">contacts</a>
-                </li>
-            </ul>
-        </div>
+        <nav class="navigation booking__navigation">
+            <div class="menu">
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+            </div>
+            <div class="navigation__wrapper">
+                <ul class="navigation-menu booking__navigation-menu">
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link" href="index.html">home</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link tours-page__link--active"
+                            href="tours.html">tours</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link"
+                            href="booking.html">booking</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link"
+                            href="contacts.html">contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
+
+    <section class="tours">
+        <div class="container-fluid">
+            <div class="tours__wrapper">
+                <div class="tours__choice">
+                    <h2 class="tours__subtitle">When are you traveling? <i class="icon-date tours__subtitle--icon"></i></h2>
+                    <ul class="tours__items">
+                        <li class="tours__item">
+                            <a href="#" class="tours__link">day tours</a>
+                        </li>
+                        <li class="tours__item">
+                            <a href="#" class="tours__link">multi-day tours</a>
+                        </li>
+                        <li class="tours__item">
+                            <a href="#" class="tours__link">self drive tours</a>
+                        </li>
+                        <li class="tours__item">
+                            <a href="#" class="tours__link">helicopter tours</a>
+                        </li>
+                    </ul>
+
+                    <div class="tours__price">
+                        <h3 class="tours__price-title">Price</h3>
+                    </div>
+
+                    <form class="tours__checkbox">
+                        <h3 class="tours__checkbox-title">Time of Day</h3>
+                        <ul class="tours__checkbox-items">
+
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">Up to 1 hour
+                                </label>
+                            </li>
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">1 to 4 hours
+                                </label>
+                            </li>
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">4 hours to 1 day
+                                </label>
+                            </li>
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">1 to 3 days
+                                </label>
+                            </li>
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">3+ days
+                                </label>
+                                
+                            </li>
+                        </ul>
+
+                        <h3 class="tours__checkbox-title">Duration</h3>
+                        <ul class="tours__checkbox-items">
+
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">6am—12pm
+                                </label>
+                            </li>
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">12pm—5pm
+                                </label>
+                            </li>
+                            <li class="tours__checkbox-item">
+                                <label class="tours__checkbox-label">
+                                    <input class="tours__checkbox-input" type="checkbox">5pm—12am
+                                </label>
+                            </li>
+                        </ul>
+                        
+                    </form>
+                </div>
+                <div class="tours__info">
+                    <div class="tours__head">
+                        <h2 class="tours__ticket">120 Tours and Tickets in Iceland</h2>
+                        <div class="tours__box">
+                            Sort by:<select class="tours__select">
+                                <option class="tours__option">Featured</option>
+                                <option class="tours__option">Featured</option>
+                                <option class="tours__option">Featured</option>
+                                <option class="tours__option">Featured</option>
+                                <option class="tours__option">Featured</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="tours__card row">
+                        <div class="tours__photo col-12 col-md-4">
+                            <img class="tours__img" src="images/tours/1.jpg" alt="Tours">
+                        </div>
+                        <div class="tours__items col-12 col-md-8">
+                            <div class="tours__items-info">
+                                <h1 class="tours__title">self-drive coastal road trip around iceland</h1>
+                                <div class="tours__cost">from <br> <span class="tours__span">$1200</span></div>
+                            </div>
+                            <p class="tours__text">
+                                Hit Iceland's lesser-known roads on this awesome self-drive tour of North Iceland and the Ring Road! 
+                            </p>
+                            <div class="tours__more">
+                                more...
+                            </div>
+                            <div class="tours__icons">
+                                <div class="tours__icon">
+                                    <i class="icon-time tours__icon--item"></i> 11 days
+                                </div>
+                                <div class="tours__icon">
+                                    <i class="icon-check tours__icon--item tours__icon--small"></i> Free Cancellation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tours__card row">
+                        <div class="tours__photo col-12 col-md-4">
+                            <img class="tours__img" src="images/tours/2.jpg" alt="Tours">
+                        </div>
+                        <div class="tours__items col-12 col-md-8">
+                            <div class="tours__items-info">
+                                <h1 class="tours__title">South Coast, Jokulsarlon, Golden Circle and Snæfellsnes</h1>
+                                <div class="tours__price">from <br> <span class="tours__span">$700</span></div>
+                            </div>
+                            <p class="tours__text">
+                                Take your time exploring the South Coast of Iceland and the Golden Circle on this 4-day tour. 
+                            </p>
+                            <div class="tours__more">
+                                more...
+                            </div>
+                            <div class="tours__icons">
+                                <div class="tours__icon">
+                                    <i class="icon-time tours__icon--item"></i> 11 days
+                                </div>
+                                <div class="tours__icon">
+                                    <i class="icon-check tours__icon--item tours__icon--small"></i> Free Cancellation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tours__card row">
+                        <div class="tours__photo col-12 col-md-4">
+                            <img class="tours__img" src="images/tours/3.jpg" alt="Tours">
+                        </div>
+                        <div class="tours__items col-12 col-md-8">
+                            <div class="tours__items-info">
+                                <h1 class="tours__title">Full-Day Private Glacier and Ice Cave Hike with Photo Package</h1>
+                                <div class="tours__price">from <br> <span class="tours__span">$350</span></div>
+                            </div>
+                            <p class="tours__text">
+                                We are the only glacier tour company in Iceland to give you a professional photo package 
+                            </p>
+                            <div class="tours__more">
+                                more...
+                            </div>
+                            <div class="tours__icons">
+                                <div class="tours__icon">
+                                    <i class="icon-time tours__icon--item"></i> 11 days
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tours__card row">
+                        <div class="tours__photo col-12 col-md-4">
+                            <img class="tours__img" src="images/tours/4.jpg" alt="Tours">
+                        </div>
+                        <div class="tours__items col-12 col-md-8">
+                            <div class="tours__items-info">
+                                <h1 class="tours__title">Kjölur and Golden Circle Exploration from Reykjavik</h1>
+                                <div class="tours__price">from <br> <span class="tours__span">$450</span></div>
+                            </div>
+                            <p class="tours__text">
+                                Lay eyes on Iceland’s wildest landscapes and famous natural wonders on this full-day Golden Circle 
+                            </p>
+                            <div class="tours__more">
+                                more...
+                            </div>
+                            <div class="tours__icons">
+                                <div class="tours__icon">
+                                    <i class="icon-time tours__icon--item"></i> 11 days
+                                </div>
+                                <div class="tours__icon">
+                                    <i class="icon-check tours__icon--item tours__icon--small"></i> Free Cancellation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tours__card row">
+                        <div class="tours__photo col-12 col-md-4">
+                            <img class="tours__img" src="images/tours/5.jpg" alt="Tours">
+                        </div>
+                        <div class="tours__items col-12 col-md-8">
+                            <div class="tours__items-info">
+                                <h1 class="tours__title">Mountain Helicopter Tour with Summit Landing from Reykjavik</h1>
+                                <div class="tours__price">from <br> <span class="tours__span">$520</span></div>
+                            </div>
+                            <p class="tours__text">
+                                Enjoy awe-inspiring aerial views of Reykjavik and its mountains on this Iceland helicopter tour. 
+                            </p>
+                            <div class="tours__more">
+                                more...
+                            </div>
+                            <div class="tours__icons">
+                                <div class="tours__icon">
+                                    <i class="icon-time tours__icon--item"></i> 11 days
+                                </div>
+                                <div class="tours__icon">
+                                    <i class="icon-check tours__icon--item tours__icon--small"></i> Free Cancellation
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container-fluid footer__block">

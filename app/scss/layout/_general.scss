@@ -29,9 +29,15 @@ body {
 
 .container-fluid {
   min-width: 320px;
-  max-width: 1170px;
+  max-width: 1230px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px){
+  .container-fluid {
+    padding: 0 60px;
+  }
 }
 // Main styles

@@ -1,18 +1,11 @@
 .ice {
-  padding: 160px 0;
+  position: relative;
+  padding-bottom: 50px;
   &__info {
     margin-bottom: 40px;
   }
   &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  &__item {
-    @include size(200px, 400px);
-    overflow: hidden;
-    position: relative;
-    margin: 0 5px 20px;
+    display: none;
   }
   &__img {
     @include pos($b: 0, $l: 0);
@@ -21,20 +14,29 @@
 
 @media (min-width: 1024px) {
   .ice {
+    padding-bottom: 160px;
+    position: relative;
     &__container {
       display: flex;
-      justify-content: space-between;
+      
     }
     &__info {
-      width: 33%;
+      width: 37%;
+      margin-top: 10px;
     }
     &__content {
-      width: 62%;
+      @include align($pos: absolute);
+      @include size(630px, 100%);
+      right: 0;
+      display: flex;
       justify-content: center;
     }
     &__item {
+      right: 0;
       @include size(33%, 590px);
       margin: 0;
+      overflow: hidden;
+    position: relative;
       &::before {
         @include size(100%);
         @include pos($t: 0, $l: 0, $z: 10);
