@@ -4,6 +4,7 @@
   position: relative;
   padding-top: 20px;
   min-height: 100vh;
+  background-attachment: fixed;
   &::before {
     @include size(100%);
     @include pos($t: 0, $l: 0);
@@ -13,7 +14,7 @@
   }
 
   &__wrapper {
-    padding-top: 20vh;
+    padding-top: 15vh;
   }
 
   &__container {

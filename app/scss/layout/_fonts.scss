@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
 
-@include font-face('icomoon', 'fonts/icomoon/icomoon', $ver: '?2l9y4r');
+@include font-face('icomoon', 'fonts/icomoon/icomoon', $ver: '?yic4lm');
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -28,54 +29,51 @@
 .icon-date:before {
   content: "\e903";
 }
-.icon-facebook:before {
+.icon-dollar:before {
   content: "\e904";
 }
-.icon-fire:before {
+.icon-facebook:before {
   content: "\e905";
 }
-.icon-footer__facebook:before {
-  content: "\e906";
-}
-.icon-footer__inst:before {
+.icon-fire:before {
   content: "\e907";
 }
-.icon-footer__twitter:before {
+.icon-hand:before {
   content: "\e908";
 }
-.icon-:before {
+.icon-inst:before {
   content: "\e909";
 }
-.icon-inst:before {
+.icon-mark:before {
   content: "\e90a";
 }
-.icon-mark:before {
+.icon-payment:before {
   content: "\e90b";
 }
-.icon-payment:before {
+.icon-peoples:before {
   content: "\e90c";
 }
-.icon-peoples:before {
+.icon-price:before {
   content: "\e90d";
 }
-.icon-price:before {
+.icon-smile:before {
   content: "\e90e";
 }
-.icon-smile:before {
+.icon-star:before {
   content: "\e90f";
 }
-.icon-star:before {
+.icon-time:before {
   content: "\e910";
 }
-.icon-time:before {
+.icon-twitter:before {
   content: "\e911";
 }
-.icon-twitter:before {
+.icon-vector:before {
   content: "\e912";
 }
-.icon-vector:before {
+.icon-welcome:before {
   content: "\e913";
 }
-.icon-welcome:before {
-  content: "\e914";
+.icon-yt:before {
+  content: "\e906";
 }
