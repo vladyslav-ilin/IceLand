@@ -25,6 +25,12 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
+  &__link{
+    &:hover{
+      text-decoration: none;
+      color: #007bff;
+    }
+  }
 }
 
 .navigation-social {
@@ -35,6 +41,15 @@
   &__list {
     margin: 0 20px;
     font-size: 26px;
+  }
+  &__text{
+    display: none;
+  }
+  &__link{
+    &:hover{
+      color: #007bff;
+      text-decoration: none;
+    }
   }
 }
 
@@ -89,6 +104,24 @@
     }
     &__link {
       color: $text;
+      position: relative;
+      // padding-left: 70px;
+      &:hover{
+        text-decoration: none;
+        color: $text;
+        .navigation-social__text{
+          opacity: 1;
+          left: -80px;
+        }
+      }
+    }
+    &__text{
+      @include pos($l: -40px, $t:5px);
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      opacity: 0;
+      transition: all .3s ease;
     }
   }
 }

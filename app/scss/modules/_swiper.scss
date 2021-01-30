@@ -166,7 +166,7 @@
       font-size: 40px;
     }
     &__prev {
-      @include pos($l: -30px);
+      @include pos($l: -15px);
       transform: rotate(180deg);
     }
     &__next {

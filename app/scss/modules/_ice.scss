@@ -43,6 +43,12 @@
         content: "";
         background: rgba(181, 202, 213, 0.6);
         pointer-events: none;
+        transition: all .3s ease;
+      }
+      &:hover{
+        &::before{
+          background: rgba(181, 202, 213, 0);
+        }
       }
     }
   }
