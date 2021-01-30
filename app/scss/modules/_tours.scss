@@ -1,5 +1,5 @@
 .tours-page {
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     padding: 110px 0 125px;
     background: url(../images/tours/tours-bg.jpg) no-repeat center;
     background-size: cover;
@@ -23,7 +23,7 @@
 }
 
 .tours {
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding-bottom: 30px;
   }
   padding: 60px 0 115px;
@@ -42,17 +42,17 @@
       top: 5px;
     }
   }
-  &__wrapper{
+  &__wrapper {
     display: flex;
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       flex-wrap: wrap;
     }
   }
-  &__items{
+  &__items {
     margin-bottom: 35px;
     max-width: 64%;
   }
-  &__item{
+  &__item {
     margin-bottom: 20px;
   }
   &__link {
@@ -62,190 +62,196 @@
     text-transform: uppercase;
     color: $text;
   }
-  &__price{
-    &-title{
+  &__price {
+    &-title {
       letter-spacing: 1.08px;
       font-size: 18px;
       margin-bottom: 10px;
     }
   }
-  &__choice{
-    @media (max-width: 768px){
+  &__choice {
+    @media (max-width: 768px) {
       width: 100%;
       margin-bottom: 40px;
     }
     margin-right: 50px;
   }
-  &__checkbox{
-    &-title{
+  &__checkbox {
+    &-title {
       letter-spacing: 1.08px;
       font-size: 18px;
       margin-bottom: 20px;
     }
-    &-item{
+    &-item {
       margin-bottom: 15px;
     }
-    &-input{
+    &-input {
       margin-right: 10px;
       border-radius: 0;
     }
   }
-  
-  &__head{
+
+  &__head {
     display: flex;
     justify-content: space-between;
     margin-bottom: 35px;
     letter-spacing: 0.84px;
   }
-  &__box{
+  &__box {
     letter-spacing: 0.84px;
     margin-right: 5px;
   }
-  &__select{
+  &__select {
     font: 400 14px $font;
   }
-  &__card{
+  &__card {
     display: flex;
     justify-content: space-between;
   }
-  &__items{
-    &-info{
+  &__items {
+    &-info {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
-
     }
   }
-  &__title{
+  &__title {
     font-weight: 600;
     letter-spacing: 0.84px;
     text-transform: uppercase;
     width: 60%;
   }
-  &__cost{
+  &__cost {
     letter-spacing: 0.84px;
   }
-  &__span{
+  &__span {
     letter-spacing: 1.08px;
-      font-size: 18px;
-      font-weight: 600;
+    font-size: 18px;
+    font-weight: 600;
   }
-  &__text{
+  &__text {
     letter-spacing: 0.84px;
     margin-bottom: 10px;
   }
-  &__more{
+  &__more {
     font-weight: 600;
     letter-spacing: 0.84px;
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  &__icons{
+  &__icons {
     display: flex;
   }
-  &__icon{
+  &__icon {
     margin-right: 30px;
     font-weight: 500;
     letter-spacing: 0.84px;
-    &--item{
+    &--item {
       margin-right: 5px;
       font-size: 15px;
     }
-    &--small{
+    &--small {
       font-size: 10px;
     }
   }
 }
 
-@media (max-width: 768px){
-  .tours{
-    &__info{
+@media (max-width: 768px) {
+  .tours {
+    &__info {
       text-align: center;
     }
-    &__photo{
+    &__photo {
       margin-bottom: 30px;
     }
-    &__items{
+    &__items {
       text-align: left;
       max-width: 100%;
     }
   }
 }
 
-// .tours {
+.tourss {
+  padding: 50px 0;
 
-//   &__title {
-//     font-weight: 600;
-//     font-size: 18px;
-//     margin-bottom: 25px;
-//     text-transform: uppercase;
-//     letter-spacing: 1.5px;
-//   }
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
 
-//   &__text {
-//     line-height: 22px;
-//     margin-bottom: 15px;
-//   }
+  &__text {
+    line-height: 22px;
+    margin-bottom: 15px;
+  }
 
-//   &__text--1 {
-//     font-weight: 700;
-//   }
+  &__text--1 {
+    font-weight: 700;
+  }
 
-//   &__text--2 {
-//     font-weight: 700;
+  &__text--2 {
+    font-weight: 700;
 
-//     &--mod {
-//       font-weight: 500;
-//       text-decoration: line-through;
-//       color: #929292;
-//     }
-//   }
+    &--mod {
+      font-weight: 500;
+      text-decoration: line-through;
+      color: #929292;
+    }
+  }
 
-//   &__img {
-//     @include size(100%);
-//     padding-top: 40px;
-//   }
+  &__img {
+    @include size(100%);
+    padding-top: 40px;
+    transition: all 0.9s;
 
-//   &__img-txt {
-//     position: absolute;
-//     text-transform: uppercase;
-//     color: #fff;
-//     top: 50px;
-//     right: 13px;
-//     font-weight: 700;
-//   }
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
-//   &__photo {
-//     position: relative;
-//   }
+  &__img-txt {
+    position: absolute;
+    text-transform: uppercase;
+    color: #fff;
+    top: 50px;
+    right: 13px;
+    font-weight: 700;
+  }
 
-//   @media (min-width: $mobile) {
-//     &__info {
-//       width: 100%;
-//       margin-right: 130px;
-//     }
+  &__photo {
+    position: relative;
+    overflow: hidden;
+  }
 
-//     &__img-txt {
-//       top: 15px;
-//     }
+  @media (min-width: $mobile) {
+    &__info {
+      width: 100%;
+      margin-right: 130px;
+    }
 
-//     &__photo {
-//       width: 100%;
-//     }
+    &__img-txt {
+      top: 15px;
+    }
 
-//     &__img {
-//       @include size(100%);
-//       padding-top: 0;
-//     }
+    &__photo {
+      width: 100%;
+    }
 
-//     &__block {
-//       display: flex;
-//     }
-//   }
-// }
+    &__img {
+      @include size(100%);
+      padding-top: 0;
+    }
 
-// .price {
-//   display: flex;
-//   justify-content: space-between;
-//   margin-bottom: 30px;
-// }
+    &__block {
+      display: flex;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,51 @@
+.maps {
+  margin-bottom: 100px;
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    width: 75%;
+    margin-right: 20px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.28px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    line-height: 24px;
+  }
+
+  &__strong {
+    font-weight: 600;
+  }
+
+  @media (max-width: $mobile) {
+    & {
+      margin-bottom: 50px;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__info {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+#map {
+  height: 255px;
+  width: 100%;
+}
