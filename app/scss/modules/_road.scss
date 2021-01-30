@@ -1,10 +1,28 @@
 .road {
+  position: relative;
+
+  &__images {
+    position: absolute;
+    top: 400px;
+    left: 400px;
+    z-index: -1;
+  }
+  @media (max-width: $mobile) {
+    &__img {
+      display: none;
+    }
+  }
+
   &__title {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 28px;
     letter-spacing: 1px;
     margin-bottom: 20px;
+  }
+
+  &__block {
+    position: relative;
   }
 
   &__text {
@@ -26,6 +44,7 @@
 
   &__img {
     margin-bottom: 20px;
+    position: relative;
   }
 
   &__desc {
@@ -54,9 +73,6 @@
     margin-bottom: 80px;
   }
 
-  &__wrap--2 {
-  }
-
   &__mark--2 {
     text-transform: uppercase;
     font-size: 24px;
@@ -77,12 +93,26 @@
   }
 
   @media (max-width: $mobile) {
+    &__box {
+      margin-bottom: 40px;
+    }
+
+    &__box--2 {
+      margin-bottom: 20px;
+    }
+
     &__img {
       width: 100%;
     }
 
     &__info {
       margin: 0;
+    }
+
+    &__info--3 {
+      font-weight: 600;
+      line-height: 22px;
+      margin-bottom: 40px;
     }
 
     &__wrap,
@@ -95,6 +125,22 @@
       margin-bottom: 20px;
       text-align: center;
     }
+
+    &__inside,
+    &__inside--1,
+    &__inside--2,
+    &__inside--3 {
+      position: absolute;
+      bottom: 50px;
+      left: 250px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    &__block--2 {
+      position: relative;
+    }
   }
 
   @media (min-width: $mobile) {
@@ -106,16 +152,93 @@
     }
 
     &__desc {
-      margin-bottom: 160px;
+      margin-bottom: 20px;
     }
 
     &__info {
-      padding-bottom: 160px;
+      padding-bottom: 50px;
+      margin-bottom: 30px;
     }
 
     &__info--2 {
       margin-left: 25px;
       margin-right: 270px;
+    }
+
+    &__info--3 {
+      margin-left: 270px;
+      margin-right: 50px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+
+    .wrap--3 {
+      align-items: center;
+    }
+
+    &__in {
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        .road__inside,
+        .road__inside--1,
+        .road__inside--2,
+        .road__inside--3 {
+          color: rgb(18, 133, 168);
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &__img {
+      &:hover {
+        opacity: 0.9 !important;
+      }
+    }
+
+    &__inside {
+      position: absolute;
+      bottom: 30px;
+      right: 10px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    &__inside--1 {
+      position: absolute;
+      bottom: 30px;
+      left: 340px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    &__inside--2 {
+      position: absolute;
+      bottom: 30px;
+      right: 120px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    &__inside--3 {
+      position: absolute;
+      bottom: 30px;
+      right: 90px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    &__blog--1 {
+      margin-bottom: 30px;
     }
   }
 }
@@ -123,4 +246,32 @@
 .icon-mark {
   margin-right: 18px;
   font-size: 30px;
+}
+
+.hide {
+  display: none;
+}
+.hide + label ~ div {
+  display: none;
+}
+/* оформляем текст label */
+.hide + label {
+  padding: 0 0 10px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+  color: red;
+  border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+  display: block;
+  background: #efefef;
+  -moz-box-shadow: inset 3px 3px 10px #7d8e8f;
+  -webkit-box-shadow: inset 3px 3px 10px #7d8e8f;
+  box-shadow: inset 3px 3px 10px #7d8e8f;
+  padding: 10px;
 }

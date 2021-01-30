@@ -23,23 +23,102 @@
 <body>
 
     <header class="contacts">
+        <nav class="navigation booking__navigation booking__contacts">
+            <div class="menu">
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+                <span class="menu__line"></span>
+            </div>
+            <div class="navigation__wrapper">
+                <ul class="navigation-menu booking__navigation-menu">
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link" href="index.html">home</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link "
+                            href="tours.html">tours</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link"
+                            href="booking.html">booking</a>
+                    </li>
+                    <li class="navigation-menu__list booking__navigation-list">
+                        <a class="navigation-menu__link booking__menu-link tours-page__link tours-page__link--active"
+                            href="contacts.html">contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <div class="container-fluid">
-            <ul class="navigation-page">
-                <li class="navigation-page__list ">
-                    <a class="navigation-page__link" href="index.html">home</a>
-                </li>
-                <li class="navigation-page__list">
-                    <a class="navigation-page__link" href="tours.html">tours</a>
-                </li>
-                <li class="navigation-page__list ">
-                    <a class="navigation-page__link" href="booking.html">booking</a>
-                </li>
-                <li class="navigation-page__list active">
-                    <a class="navigation-page__link" href="contacts.html">contacts</a>
-                </li>
-            </ul>
+            
+
+            <h1 class="contacts__title">Important Information about your Pick-up Point</h1>
         </div>
     </header>
+
+    <section class="main">
+        <!-- <img src="images/contacts/contacts-bg-2.png" alt="img" class="main__bg"> -->
+        <div class="container-fluid">
+            <h2 class="main__title">How the pick-up process works</h2>
+            <div class="main__info">
+
+                <div class="main__block">
+                    <p class="main__text">Before we start picking up passengers, our guides prepare the vehicles and
+                        print out a
+                        list of the customers that have
+                        requested pick-up services. The pick-up process changes every time, depending on the number of
+                        passengers and their
+                        location. We try to minimize the waiting time for your pick-up, but it can take up to 30
+                        minutes, so
+                        please be patient
+                        while you wait for your guide to reach you.</p>
+                    <img src="images/contacts/1.jpg" alt="img" class="main__img main__img--1" data-aos="zoom-in">
+                    <blockquote class="main__quote">The bus stops look like this</blockquote>
+                </div>
+                <div class="main__block main__block--mod">
+                    <p class="main__text">Still, It is very important to be ready at your pick-up location at the start
+                        of the pick-up time, so that you don‘t miss your pick-up.
+                        <br>
+                        <span class="main__strong">
+                            Please read your voucher carefully before pickup and be aware of who is operating your tour.
+                            There can be different labels for different tours and different operators. The vehicles are
+                            prominently marked with the operator's logo, so you should be able to spot them easily.
+                        </span>
+                    </p>
+                    <img src="images/contacts/2.jpg" alt="img" class="main__img" data-aos="zoom-in">
+                    <blockquote class="main__quote">Look for the marked pickup vehicles. Markings are tour and operator
+                        dependent, read your voucher carefully.
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section class="maps">
+        <div class="container-fluid maps__block">
+            <div class="maps__info" data-aos="flip-up">
+                <h3 class="maps__title">Pick-ups in central Reykjavik</h3>
+                <p class="maps__text">We offer pick-up services all around Reykjavik but, due to rules set by the city,
+                    buses are not allowed to pick up
+                    passengers up at their hotels in the center of Reykjavik, and must use designated pick-up points.
+                    <br>
+                    The pick-up points are marked with blue columns, so they are hard to miss.
+                    <br>
+                    <span class="maps__strong">Take a look at the map. If your hotel is inside the blue area, we kindly
+                        ask you to select one of the bus stops marked
+                        there as a pick-up location.
+                    </span>
+                </p>
+            </div>
+            <div id="map" data-aos="flip-right"></div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container-fluid footer__block">
@@ -114,6 +193,8 @@
     </footer>
 
     <!--build:js js/main.min.js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcGnZBDtuPqiINchvGrjS1IFZMFF_j-h0&callback=initMap"
+        defer></script>
     <script src="js/bundle.min.js"></script>
     <script src="js/main.js"></script>
     <!--endbuild-->

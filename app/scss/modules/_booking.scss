@@ -1,33 +1,34 @@
 .booking {
   padding-bottom: 50px;
-  &__container{
-    position: relative;
-  }
-  &__wrapper{
+
+  // &__container {
+  //   position: relative;
+  // }
+  &__wrapper {
     padding-top: 70px;
   }
-  &__title{
+  &__title {
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;
     letter-spacing: 1.08px;
     margin-bottom: 35px;
   }
-  &__nav{
+  &__nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  &__item{
+  &__item {
     @include size(145px, 45px);
     border: 1px solid $text;
     padding: 13px;
     cursor: pointer;
     text-align: center;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     margin: 0 15px 30px;
   }
-  &__link{
+  &__link {
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
@@ -36,16 +37,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     letter-spacing: 0.84px;
-    &--icon{
+    &--icon {
       font-size: 22px;
     }
-    &--text{
+    &--text {
       justify-content: center;
     }
   }
-  &__text{
+  &__text {
     color: $text;
     font-weight: 500;
     font-size: 14px;
@@ -53,147 +54,144 @@
     line-height: 24px;
     margin-bottom: 25px;
   }
-  &__subtitle{
+  &__subtitle {
     font-weight: 300;
     font-style: italic;
     font-size: 24px;
     letter-spacing: 0.84px;
     margin-bottom: 10px;
   }
-  &__travel{
+  &__travel {
     letter-spacing: 1.08px;
     font-size: 18px;
     color: $text;
     margin-bottom: 10px;
-    &--icon{
+    &--icon {
       margin-right: 10px;
     }
   }
-  &__info{
+  &__info {
     margin-bottom: 35px;
   }
-  &__time{
+  &__time {
     text-align: center;
     margin-bottom: 20px;
   }
-  &__arrow{
+  &__arrow {
     @include pos($t: 80px);
     font-size: 35px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     color: $text;
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: red;
     }
   }
-  &__prev{
+  &__prev {
     transform: rotate(180deg);
     left: -50px;
   }
-  &__next{
+  &__next {
     right: -25px;
   }
-  &__slide{
+  &__slide {
     position: relative;
     // left: -50px;
-  &::before{
-    @include size(100%, 30px);
-    @include pos($t: 0, $l:0, $z: 50);
-    content: '';
-    background: #fff;
-    transition: all .2s;
+    &::before {
+      @include size(100%, 30px);
+      @include pos($t: 0, $l: 0, $z: 50);
+      content: "";
+      background: #fff;
+      transition: all 0.2s;
+    }
   }
-  }
-  &__content{
+  &__content {
     display: none;
   }
 
-  
-  &__navigation-menu{
+  &__navigation-menu {
     transform: rotate(360deg);
     writing-mode: horizontal-tb;
     left: 200px;
-   padding-top: 25px;
-   height: 80px;
+    padding-top: 25px;
+    height: 80px;
     min-height: 80px;
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       min-height: 100vh;
     }
   }
-  
-  
 }
 
-.slick-center{
-  &::before{
+.slick-center {
+  &::before {
     opacity: 0;
   }
 }
 
-@media (min-width: 768px){
-  .booking{
+@media (min-width: 768px) {
+  .booking {
     padding-bottom: 120px;
-    &__travel{
+    &__travel {
       font-size: 18px;
     }
-    &__subtitle{
+    &__subtitle {
       font-size: 14px;
     }
-    &__time{
+    &__time {
       text-align: left;
       margin-bottom: 0;
     }
-    &__item{
+    &__item {
       margin: 0;
-      &:hover{
+      &:hover {
         background: $text;
-        .booking__link{
+        .booking__link {
           color: #fff;
           text-decoration: none;
         }
       }
     }
-    &__nav{
+    &__nav {
       justify-content: space-between;
       margin-bottom: 60px;
     }
-    &__wrapper{
+    &__wrapper {
       padding-top: 110px;
       width: 42%;
       @include pos($t: 0, $r: 0);
     }
-    &__content{
+    &__content {
       position: relative;
       left: -150px;
       z-index: 100;
       display: block;
     }
 
-    &__navigation{
+    &__navigation {
       @include size(100%, 80px);
       @include pos($pos: fixed, $t: 0);
-      &--active{
-        background: rgba(8,36,51,.4);
-        transition: all .3s ease;
+      &--active {
+        background: rgba(8, 36, 51, 0.4);
+        transition: all 0.3s ease;
         z-index: 120;
       }
     }
-    &__navigation-list{
+    &__navigation-list {
       margin-right: 90px;
       height: 20px;
-    display: inline-block;
+      display: inline-block;
     }
-    &__menu-link{
-      &::before{
+    &__menu-link {
+      &::before {
         @include size(100%, 1px);
-          @include pos($b: -5px, $l: 0, $t: auto);
+        @include pos($b: -5px, $l: 0, $t: auto);
       }
-      &--scroll{
+      &--scroll {
         color: #fff;
-        &:hover{
+        &:hover {
           color: #fff;
         }
-        &::before{
+        &::before {
           background: #fff;
         }
       }
