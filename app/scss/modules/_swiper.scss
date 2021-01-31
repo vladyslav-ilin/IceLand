@@ -41,7 +41,7 @@
     text-transform: uppercase;
     font-weight: 800;
     background: $button;
-    padding: 10px 20px;
+    padding: 15px 40px;
   }
 
   &__img {
@@ -49,9 +49,38 @@
     margin-bottom: 5px;
   }
 
+  @media (max-width: $mobile) {
+    &__price {
+      right: -5px;
+    }
+
+    &__content {
+      text-align: center;
+    }
+
+    &__img {
+      width: 95%;
+    }
+
+    &__items {
+      margin-bottom: 20px;
+      height: 570px;
+    }
+
+    .swiper-pagination {
+      width: 85%;
+    }
+
+    .swiper-pagination-bullet {
+      @include size(8px);
+      margin-right: 10px;
+      background: #000;
+    }
+  }
+
   @media (min-width: $mobile) {
     &__item {
-      height: 510px;
+      height: 500px;
       width: 90%;
     }
     &__img {
@@ -66,15 +95,18 @@
       height: 500px;
       width: 90%;
     }
+
+    .swiper-pagination {
+      display: none;
+    }
   }
 
   // .swiper-container {
   //   overflow: visible;
   // }
 }
-
 .swiper {
-  padding-bottom: 50px;
+  padding-bottom: 115px;
   &__title {
     font-size: 28px;
     font-weight: 600;
@@ -82,53 +114,40 @@
     letter-spacing: 0.06em;
     margin-bottom: 30px;
   }
-
+  &__item {
+    @include size(33.3%, 230px);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      .swiper__text {
+        @include size(100%, 100%);
+        bottom: 0;
+      }
+    }
+  }
   &__text {
-    font-size: 16px;
+    @include size(100%, 0);
+    @include pos($b: -100%, $l: 0);
+    padding: 30px 50px 30px 25px;
+    line-height: 14px;
+    font-size: 12px;
+    background: rgba(8, 36, 51, 0.76);
     font-weight: 500;
     letter-spacing: 0.06em;
-    color: $text;
+    color: $white;
     transition: all 0.5s ease;
-  }
-  &__content {
-    position: relative;
-    margin-bottom: 25px;
-  }
-  &__photo {
-    @include size(100%, 230px);
-    display: block;
-  }
-  &__img {
-    @include size(100%, 230px);
-    display: block;
   }
   &__info {
     @include size(100%, 60px);
     padding: 10px 15px 5px 25px;
-    @include pos($b: 0, $l: 0, $z: 5);
+    @include pos($b: 0, $l: 0);
     background: rgba(8, 36, 51, 0.5);
-    &--booking{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-  &__stars{
-    display: flex;
-  }
-  &__star{
-    font-size: 20px;
-    color: #DCE9F0;
-    margin-left: 7px;
-    transition: all .3s ease;
-    &:hover{
-      color: #fff;
-    }
   }
   &__name {
     color: $white;
     font-weight: 600;
-    letter-spacing: 0.84px;
+    letter-spacing: 0.06em;
   }
   &__date {
     color: $white;
@@ -136,69 +155,4 @@
     font-weight: 500;
     letter-spacing: 0.06em;
   }
-  &__dots {
-    @include align(false, true);
-    bottom: -20px;
-  }
-  &__fluid {
-    position: relative;
-  }
-  &__arrows {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .swiper {
-    padding-bottom: 115px;
-    &__dots {
-      display: none;
-    }
-    &__arrows {
-      @include pos($t: 50%, $l: 0);
-      transform: translateY(30px);
-      width: 100%;
-      z-index: 110;
-      display: flex;
-      align-items: center;
-    }
-    &__arrow {
-      font-size: 40px;
-    }
-    &__prev {
-      @include pos($l: -30px);
-      transform: rotate(180deg);
-    }
-    &__next {
-      @include pos($r: 0px);
-    }
-    &__text {
-      @include pos($t: -100%, $l: 0);
-      @include size(100%, 230px);
-      background: rgba(8, 36, 51, 0);
-      padding: 30px 50px 30px 25px;
-      line-height: 15px;
-      font-size: 12px;
-      color: $white;
-      transition: all .3s ease;
-    }
-    &__item{
-      cursor: pointer;
-      &:hover{
-        .swiper__text{
-          top: 0;
-          background: rgba(8, 36, 51, 0.76);
-        }
-      }
-    }
-  }
-}
-
-.swiper__dots .swiper-pagination-bullet {
-  @include size(10px);
-  line-height: 15px;
-  font-size: 14px;
-  background: #000;
-  z-index: 10;
-  margin: 0 5px;
 }

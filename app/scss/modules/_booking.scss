@@ -1,9 +1,10 @@
 .booking {
   padding-bottom: 50px;
 
-  // &__container {
-  //   position: relative;
-  // }
+  &__contacts {
+    z-index: 1;
+  }
+
   &__wrapper {
     padding-top: 70px;
   }

@@ -18,7 +18,7 @@
   cursor: pointer;
 
   &:hover {
-    border: 1px solid #000;
+    color: rgb(18, 133, 168);
   }
 }
 
@@ -26,5 +26,9 @@
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
+  }
+
+  .button-slider {
+    left: 100px;
   }
 }
