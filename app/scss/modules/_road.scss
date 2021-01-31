@@ -7,11 +7,6 @@
     left: 400px;
     z-index: -1;
   }
-  @media (max-width: $mobile) {
-    &__images {
-      display: none;
-    }
-  }
 
   &__title {
     text-transform: uppercase;
