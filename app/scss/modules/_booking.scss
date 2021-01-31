@@ -1,5 +1,10 @@
 .booking {
   padding-bottom: 50px;
+
+  &__contacts {
+    z-index: 1;
+  }
+
   &__menu{
     background: $text;
     z-index: 99;

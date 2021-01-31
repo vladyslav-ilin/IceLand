@@ -8,7 +8,7 @@
     z-index: -1;
   }
   @media (max-width: $mobile) {
-    &__img {
+    &__images {
       display: none;
     }
   }
@@ -67,6 +67,12 @@
     font-weight: 600;
     line-height: 22px;
     margin: 0 50px 0 120px;
+  }
+
+  @media (max-width: $mobile) {
+    &__info {
+      margin-right: 45px !important;
+    }
   }
 
   &__box {
@@ -132,7 +138,7 @@
     &__inside--3 {
       position: absolute;
       bottom: 50px;
-      left: 250px;
+      left: 290px;
       color: #fff;
       font-size: 12px;
       font-weight: 700;
