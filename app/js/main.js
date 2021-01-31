@@ -1,5 +1,13 @@
 'use strict';
 
+// let slider = document.getElementById("myRange");
+// let price = document.getElementById("price");
+// price.innerHTML = slider.value;
+
+// slider.oninput = function() {
+//   price.innerHTML = this.value;
+// }
+
 function initMap() {
   let map, coords, styles, marker, info, content;
 
@@ -115,6 +123,7 @@ new Swiper('.swiper__container', {
       slidesToScroll: 1,
       arrows: false,
       fade: true,
+      dots: true,
       asNavFor: '.booking__content',
     });
     $('.booking__content').slick({
@@ -140,8 +149,11 @@ new Swiper('.swiper__container', {
       $('.booking__navigation').removeClass('booking__navigation--active');
       $('.booking__menu-link').removeClass('booking__menu-link--scroll');
     }
-    
+  });
 
+  $('.tours__subtitle').on('click', function () {
+    $(this).toggleClass('tours__subtitle--open');
+    $('.tours__open').toggleClass('tours__open--open');
   });
 })(jQuery);
 

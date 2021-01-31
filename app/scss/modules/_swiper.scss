@@ -1,6 +1,7 @@
 .slider {
   &__arrow {
     position: relative;
+    margin: 100px;
   }
 
   &__title {
@@ -155,4 +156,76 @@
     font-weight: 500;
     letter-spacing: 0.06em;
   }
+  &__dots {
+    @include align(false, true);
+    bottom: -20px;
+  }
+  &__fluid {
+    position: relative;
+  }
+  &__arrows {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    padding-bottom: 115px;
+    &__dots {
+      display: none;
+    }
+    &__arrows {
+      @include pos($t: 50%, $l: 0);
+      transform: translateY(45px);
+      width: 100%;
+      z-index: 110;
+      display: flex;
+      align-items: center;
+    }
+    &__arrow {
+      font-size: 40px;
+      transition: all 0.3s ease;
+      &:hover {
+        color: #007bff;
+      }
+    }
+    &__prev {
+      @include pos($l: 0px);
+      transform: rotate(180deg);
+    }
+    &__next {
+      @include pos($r: 0px);
+    }
+    &__text {
+      @include pos($b: -100%, $l: 0);
+      @include size(100%, 230px);
+      background: rgba(8, 36, 51, 0);
+      padding: 30px 50px 30px 25px;
+      line-height: 15px;
+      font-size: 12px;
+      color: $white;
+      transition: all 0.3s ease;
+    }
+    &__content {
+      margin-bottom: 0;
+    }
+    &__item {
+      cursor: pointer;
+      &:hover {
+        .swiper__text {
+          bottom: 0;
+          background: rgba(8, 36, 51, 0.76);
+        }
+      }
+    }
+  }
+}
+
+.swiper__dots .swiper-pagination-bullet {
+  @include size(10px);
+  line-height: 15px;
+  font-size: 14px;
+  background: #000;
+  z-index: 10;
+  margin: 0 5px;
 }

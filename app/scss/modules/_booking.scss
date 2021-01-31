@@ -5,8 +5,15 @@
     z-index: 1;
   }
 
+  &__menu{
+    background: $text;
+    z-index: 99;
+  }
+  &__container {
+    position: relative;
+  }
   &__wrapper {
-    padding-top: 70px;
+    padding-top: 40px;
   }
   &__title {
     font-weight: 600;
@@ -132,6 +139,13 @@
 @media (min-width: 768px) {
   .booking {
     padding-bottom: 120px;
+    &__head{
+      display: none;
+    }
+
+    &__navigation-social{
+      display: none;
+    }
     &__travel {
       font-size: 18px;
     }
@@ -145,7 +159,7 @@
     &__item {
       margin: 0;
       &:hover {
-        background: $text;
+        background: #007bff;
         .booking__link {
           color: #fff;
           text-decoration: none;

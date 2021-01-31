@@ -50,6 +50,17 @@
       margin: 0 auto 20px;
       transition: all 0.3s ease;
     }
+    &--price{
+      position: relative;
+      font-size: 60px;
+      &::after{
+        @include align(false, true);
+        @include pos($t: 20px);
+
+        content: '\e904';
+        font-size: 21px;
+      }
+    }
   }
   &__text {
     font-weight: 500;
