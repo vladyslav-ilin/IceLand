@@ -1,7 +1,7 @@
 .tours-page {
   @media (min-width: 768px) {
     padding: 110px 0 125px;
-    background: url(../images/tours/tours-bg.jpg) no-repeat center;
+    background: url("../images/tours/tours-bg.jpg") no-repeat center;
     background-size: cover;
   }
   position: relative;
@@ -23,6 +23,30 @@
 }
 
 .tours {
+  &__price-items {
+    margin-bottom: 40px;
+    margin-top: 60px;
+  }
+  &__price-item {
+    margin-bottom: 15px;
+    position: relative;
+    @include size(100%, 15px);
+    background: #000;
+    outline: none;
+    // -webkit-appearance: none;
+    &::before,
+    &::after {
+      @include pos($t: -25px);
+    }
+    &::before {
+      content: "$0";
+      left: 0;
+    }
+    &::after {
+      content: "$425";
+      right: 0;
+    }
+  }
   @media (max-width: 768px) {
     padding-bottom: 30px;
   }
@@ -30,16 +54,24 @@
   &__subtitle {
     position: relative;
     top: -10px;
-    letter-spacing: 0.84px;
-    font-size: 14px;
+    font-size: 20px;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     white-space: nowrap;
+    &--arrow {
+      display: inline-block;
+      font-size: 20px;
+      transform: rotate(90deg);
+      position: relative;
+      top: 3px;
+      margin-left: 10px;
+    }
     &--icon {
       margin-left: 15px;
       font-size: 23px;
       position: relative;
       top: 5px;
+      display: none;
     }
   }
   &__wrapper {
@@ -56,7 +88,7 @@
     margin-bottom: 20px;
   }
   &__link {
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: 0.84px;
     font-weight: 600;
     text-transform: uppercase;
@@ -67,6 +99,7 @@
       letter-spacing: 1.08px;
       font-size: 18px;
       margin-bottom: 10px;
+      margin-bottom: 30px;
     }
   }
   &__choice {
@@ -89,6 +122,9 @@
       margin-right: 10px;
       border-radius: 0;
     }
+    &-label {
+      cursor: pointer;
+    }
   }
 
   &__head {
@@ -103,6 +139,7 @@
   }
   &__select {
     font: 400 14px $font;
+    cursor: pointer;
   }
   &__card {
     display: flex;
@@ -138,6 +175,12 @@
     letter-spacing: 0.84px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    display: inline-block;
+    color: $text;
+    transition: all 0.3s ease;
+    &:hover {
+      text-decoration: none;
+    }
   }
   &__icons {
     display: flex;
@@ -153,6 +196,24 @@
     &--small {
       font-size: 10px;
     }
+  }
+  &__photo {
+    @include size(270px, 165px);
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      .tours__img {
+        transform: scale(1.2) rotate(-5deg);
+      }
+    }
+  }
+  &__img {
+    @include size(100%);
+    @include pos($t: 0, $l: 0);
+    transition: all 0.3s ease;
+  }
+  &__link--fire {
+    display: none;
   }
 }
 
@@ -201,16 +262,6 @@
     }
   }
 
-  &__img {
-    @include size(100%);
-    padding-top: 40px;
-    transition: all 0.9s;
-
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
-
   &__img-txt {
     position: absolute;
     text-transform: uppercase;
@@ -218,11 +269,6 @@
     top: 50px;
     right: 13px;
     font-weight: 700;
-  }
-
-  &__photo {
-    position: relative;
-    overflow: hidden;
   }
 
   @media (min-width: $mobile) {
@@ -246,6 +292,94 @@
 
     &__block {
       display: flex;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .tours{
+    &__subtitle{
+      padding-top: 10px;
+      cursor: pointer;
+      transition: all .3s ease;
+      &--arrow{
+        transition: all .3s ease;
+      }
+      &--open{
+        .tours__subtitle--arrow{
+          transform: scale(1.2);
+        }
+      }
+    }
+    &__head{
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+    &__items{
+      order: 1;
+    }
+    &__photo{
+      order: 2;
+    }
+    &__img{
+      position: relative;
+    }
+    &__card{
+      &:not(:last-child){
+        border-bottom: 1px solid rgba(0,0,0,.2);
+        margin-bottom: 35px;
+      }
+    }
+    &__choice{
+      position: relative;
+      margin-bottom: 0;
+    }
+    &__open{
+      display: none;
+      &--open{
+        display: block;
+       margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .tours {
+    &__price-items {
+      margin-top: 0;
+    }
+    &__price-item {
+      @include size(260px, 3px);
+    }
+    &__link {
+      position: relative;
+      font-size: 14px;
+      &--fire {
+        @include pos($t: 0, $r: -10px);
+        display: inline-block;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $text;
+        .tours__link--fire {
+          opacity: 1;
+          right: -30px;
+        }
+      }
+    }
+    &__subtitle {
+      letter-spacing: 0.84px;
+      font-size: 14px;
+      margin-bottom: 40px;
+      &--icon {
+        display: inline-block;
+      }
+      &--arrow {
+        display: none;
+      }
     }
   }
 }

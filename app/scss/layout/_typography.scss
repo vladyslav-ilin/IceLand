@@ -23,3 +23,38 @@
   font-weight: 600;
   margin-bottom: 30px;
 }
+
+
+.text-logo{
+  display: none;
+}
+@media (max-width: 768px){
+  .text-logo{
+    @include size(100%, 150px);
+    background: url('../images/booking/booking-bgr.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 150px;
+    position: relative;
+    display: block;
+    &::before{
+      @include size(100%);
+      @include pos($t: 0, $l: 0);
+      content: '';
+      background: rgba(0,0,0,.2);
+    }
+    &--sub{
+      z-index: 5;
+      position: relative;
+    }
+      &--tours{
+        background: url('../images/tours/tours-bg.jpg') no-repeat center;
+      }
+    }
+}
+

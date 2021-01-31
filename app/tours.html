@@ -23,6 +23,7 @@
 <body>
 
     <header class="tours-page">
+        <h1 class="text-logo text-logo--tours"><span class="text-logo--sub">tours</span></h1>
         <nav class="navigation booking__navigation">
             <div class="menu">
                 <span class="menu__line"></span>
@@ -50,6 +51,35 @@
                             href="contacts.html">contacts</a>
                     </li>
                 </ul>
+
+                <ul class="navigation-social booking__navigation-social">
+                    <li class="navigation-social__list">
+                        <a class="navigation-social__link" href="https://unsplash.com/s/photos/iceland" target="_blank">
+                            <span class="navigation-social__text">CHROME</span> <i
+                                class="navigation__icon icon-vector"></i>
+                        </a>
+                    </li>
+                    <li class="navigation-social__list">
+                        <a class="navigation-social__link" href="https://www.instagram.com/iceland/?hl=ru"
+                            target="_blank">
+                            <span class="navigation-social__text">INSTAGRAM</span> <i
+                                class="navigation__icon icon-inst"></i>
+                        </a>
+                    </li>
+                    <li class="navigation-social__list">
+                        <a class="navigation-social__link" href="https://twitter.com/iceland" target="_blank">
+                            <span class="navigation-social__text">TWITTER</span> <i
+                                class="navigation__icon icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="navigation-social__list">
+                        <a class="navigation-social__link" href="https://www.facebook.com/icelandnaturally/"
+                            target="_blank">
+                            <span class="navigation-social__text">FACEBOOK</span> <i
+                                class="navigation__icon icon-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -58,24 +88,29 @@
         <div class="container-fluid">
             <div class="tours__wrapper">
                 <div class="tours__choice">
-                    <h2 class="tours__subtitle">When are you traveling? <i class="icon-date tours__subtitle--icon"></i></h2>
+                    <h2 class="tours__subtitle">When are you traveling? <i class="icon-date tours__subtitle--icon"></i> <i class="icon-arrow tours__subtitle--arrow"></i></h2>
+                   <div class="tours__open">
                     <ul class="tours__items">
                         <li class="tours__item">
-                            <a href="#" class="tours__link">day tours</a>
+                            <a href="#" class="tours__link">day tours <i class="icon-fire tours__link--fire"></i></a>
                         </li>
                         <li class="tours__item">
-                            <a href="#" class="tours__link">multi-day tours</a>
+                            <a href="#" class="tours__link">multi-day tours <i class="icon-fire tours__link--fire"></i></a>
                         </li>
                         <li class="tours__item">
-                            <a href="#" class="tours__link">self drive tours</a>
+                            <a href="#" class="tours__link">self drive tours <i class="icon-fire tours__link--fire"></i></a>
                         </li>
                         <li class="tours__item">
-                            <a href="#" class="tours__link">helicopter tours</a>
+                            <a href="#" class="tours__link">helicopter tours <i class="icon-fire tours__link--fire"></i></a>
                         </li>
                     </ul>
 
                     <div class="tours__price">
-                        <h3 class="tours__price-title">Price</h3>
+                        <h3 class="tours__price-title tours__price-title--slide">Price</h3>
+                        <div class="tours__price-items">
+                            <input type="range" min="0" max="425" value="213" class="tours__price-item" id="myRange">
+                            <!-- <p>Your order: <span id="price"></span>$</p> -->
+                        </div>
                     </div>
 
                     <form class="tours__checkbox">
@@ -131,6 +166,7 @@
                         </ul>
                         
                     </form>
+                   </div>
                 </div>
                 <div class="tours__info">
                     <div class="tours__head">
@@ -138,18 +174,18 @@
                         <div class="tours__box">
                             Sort by:<select class="tours__select">
                                 <option class="tours__option">Featured</option>
+                                <option class="tours__option">Other</option>
                                 <option class="tours__option">Featured</option>
-                                <option class="tours__option">Featured</option>
-                                <option class="tours__option">Featured</option>
+                                <option class="tours__option">Other</option>
                                 <option class="tours__option">Featured</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="tours__card row">
-                        <div class="tours__photo col-12 col-md-4">
+                        <a class="tours__photo col-12 col-md-4" href="booking.html">
                             <img class="tours__img" src="images/tours/1.jpg" alt="Tours">
-                        </div>
+                        </a>
                         <div class="tours__items col-12 col-md-8">
                             <div class="tours__items-info">
                                 <h1 class="tours__title">self-drive coastal road trip around iceland</h1>
@@ -158,9 +194,9 @@
                             <p class="tours__text">
                                 Hit Iceland's lesser-known roads on this awesome self-drive tour of North Iceland and the Ring Road! 
                             </p>
-                            <div class="tours__more">
+                            <a class="tours__more" href="booking.html">
                                 more...
-                            </div>
+                            </a>
                             <div class="tours__icons">
                                 <div class="tours__icon">
                                     <i class="icon-time tours__icon--item"></i> 11 days
@@ -173,9 +209,9 @@
                     </div>
 
                     <div class="tours__card row">
-                        <div class="tours__photo col-12 col-md-4">
+                        <a class="tours__photo col-12 col-md-4" href="booking.html">
                             <img class="tours__img" src="images/tours/2.jpg" alt="Tours">
-                        </div>
+                        </a>
                         <div class="tours__items col-12 col-md-8">
                             <div class="tours__items-info">
                                 <h1 class="tours__title">South Coast, Jokulsarlon, Golden Circle and Snæfellsnes</h1>
@@ -199,9 +235,9 @@
                     </div>
 
                     <div class="tours__card row">
-                        <div class="tours__photo col-12 col-md-4">
+                        <a class="tours__photo col-12 col-md-4" href="booking.html">
                             <img class="tours__img" src="images/tours/3.jpg" alt="Tours">
-                        </div>
+                        </a>
                         <div class="tours__items col-12 col-md-8">
                             <div class="tours__items-info">
                                 <h1 class="tours__title">Full-Day Private Glacier and Ice Cave Hike with Photo Package</h1>
@@ -222,9 +258,9 @@
                     </div>
 
                     <div class="tours__card row">
-                        <div class="tours__photo col-12 col-md-4">
+                        <a class="tours__photo col-12 col-md-4" href="booking.html">
                             <img class="tours__img" src="images/tours/4.jpg" alt="Tours">
-                        </div>
+                        </a>
                         <div class="tours__items col-12 col-md-8">
                             <div class="tours__items-info">
                                 <h1 class="tours__title">Kjölur and Golden Circle Exploration from Reykjavik</h1>
@@ -248,9 +284,9 @@
                     </div>
 
                     <div class="tours__card row">
-                        <div class="tours__photo col-12 col-md-4">
+                        <a class="tours__photo col-12 col-md-4" href="booking.html">
                             <img class="tours__img" src="images/tours/5.jpg" alt="Tours">
-                        </div>
+                        </a>
                         <div class="tours__items col-12 col-md-8">
                             <div class="tours__items-info">
                                 <h1 class="tours__title">Mountain Helicopter Tour with Summit Landing from Reykjavik</h1>

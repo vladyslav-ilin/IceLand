@@ -1,6 +1,7 @@
 .slider {
   &__arrow {
     position: relative;
+    margin: 100px;
   }
 
   &__title {
@@ -156,7 +157,7 @@
     }
     &__arrows {
       @include pos($t: 50%, $l: 0);
-      transform: translateY(30px);
+      transform: translateY(45px);
       width: 100%;
       z-index: 110;
       display: flex;
@@ -164,16 +165,20 @@
     }
     &__arrow {
       font-size: 40px;
+      transition: all .3s ease;
+      &:hover{
+        color: #007bff;
+      }
     }
     &__prev {
-      @include pos($l: -30px);
+      @include pos($l: 0px);
       transform: rotate(180deg);
     }
     &__next {
       @include pos($r: 0px);
     }
     &__text {
-      @include pos($t: -100%, $l: 0);
+      @include pos($b: -100%, $l: 0);
       @include size(100%, 230px);
       background: rgba(8, 36, 51, 0);
       padding: 30px 50px 30px 25px;
@@ -182,11 +187,14 @@
       color: $white;
       transition: all .3s ease;
     }
+    &__content{
+      margin-bottom: 0;
+    }
     &__item{
       cursor: pointer;
       &:hover{
         .swiper__text{
-          top: 0;
+          bottom: 0;
           background: rgba(8, 36, 51, 0.76);
         }
       }

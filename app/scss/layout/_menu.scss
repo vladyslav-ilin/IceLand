@@ -34,6 +34,7 @@
   &__open {
     @include pos($t: 20px, $r: 30px, $pos: fixed);
     .menu__line {
+      background: #fff;
       &:nth-child(1),
       &:nth-child(6) {
         transform: rotate(45deg);
