@@ -63,6 +63,7 @@ new Swiper('.slider__items', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    clickable: true,
   },
   clickable: true,
   slidesPerView: 1,

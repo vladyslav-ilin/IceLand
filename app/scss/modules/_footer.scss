@@ -34,6 +34,12 @@
 
   &__link {
     color: #fff;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgb(18, 133, 168);
+      text-decoration: none;
+    }
   }
 
   &__block {
@@ -51,21 +57,63 @@
     font-size: 24px;
     color: #fff;
     text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgb(18, 133, 168);
+    }
   }
 
   &__social {
     .footer-social {
-      &__item {
-        margin-top: 10px;
-        margin-bottom: 30px;
+      &__link {
         &:hover {
-          transform: scale(1.2);
+          text-decoration: none;
+        }
+      }
+
+      &__item {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+
+        @media (min-width: $mobile) {
+          margin-top: 0;
+          margin-bottom: 20px;
         }
       }
 
       &__item:last-child {
         margin-bottom: -25px;
       }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .footer {
+    &__title {
+      font-size: 20px;
+    }
+
+    &__item {
+      font-size: 17px;
+      line-height: 26px;
+    }
+
+    &__icon {
+      font-size: 40px;
+    }
+  }
+
+  .footer-list {
+    display: flex;
+    margin-bottom: -50px;
+  }
+  .footer-social {
+    &__item {
+      margin-right: 50px;
+      font-size: 30px;
     }
   }
 }

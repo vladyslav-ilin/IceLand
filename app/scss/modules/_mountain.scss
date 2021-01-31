@@ -16,6 +16,12 @@
 
   &__img {
     margin-bottom: 20px;
+
+    @media (max-width: $mobile) {
+      & {
+        width: 100%;
+      }
+    }
   }
 
   @media (min-width: $mobile) {
